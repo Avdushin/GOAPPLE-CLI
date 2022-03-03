@@ -5,12 +5,12 @@ clear
 echo -e "\e[0;92mInstalling programs..."
 sudo pacman -Syu i3 i3blocks i3status i3lock polybar kitty krita fish ack vim bottom neofetch flameshot variety feh rofi discord python-pip steam telegram-desktop gcolor3 lxappearance picom flatpak xdg-desktop-portal-gtk awesome-terminal-fonts noto-fonts-emoji noto-fonts --noconfirm
 echo -e "\e[0;92mCreating directories..."
-sudo mkdir -p ~/.appz
+#sudo mkdir -p ~/.appz
 sudo mkdir -p ~/.config/i3/
 sudo mkdir -p ~/.local/share/Trash/files
 echo -e "\e[0;92mInstalling programs..."
 sudo tar -C $HOME -xzf src/packages/NoiseTorch_x64.tgz
-sudo tar -xf src/packages/sublime_text.tar.xz -C ~/.appz && gtk-update-icon-cache && flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+sudo tar -xf src/packages/sublime_text.tar.xz -C /opt/ && gtk-update-icon-cache && flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 sudo cp src/distros/Manjaro/config ~/.config/i3/
 sudo cp src/distros/Manjaro/picom.conf ~/.config/i3/
 sudo cp -r src/polybar/ ~/.config/  

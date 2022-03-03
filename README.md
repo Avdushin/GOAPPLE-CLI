@@ -18,10 +18,10 @@ cd GOAPPLE
 
 ### DEMO
 
-![mm](assets/mm.png)
+![mm](src/assets/mm.png)
 
-![dm](assets/dm.png)
+![dm](src/assets/dm.png)
 
-![myos](assets/myos.png)
+![myos](src/assets/myos.png)
 
-![settings](assets/settings.png)
+![settings](src/assets/settings.png)
