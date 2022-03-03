@@ -8,7 +8,7 @@ import (
 )
 
 const (
-	version = "0.2"
+	version = "0.3"
 	// menu translate
 	// ru
 	selectru = "ВЫБРАТЬ"
@@ -16,21 +16,18 @@ const (
 	quitru   = "ВЫХОД"
 	// en
 	selecten = "SELECT"
-	// colors
-	// colorReset := "\033[0m"
-	// colorRed := "\033[31m"
-	// colorGreen := "\033[32m"
-	// ColorYellow = "\033[33m"
-	// colorBlue := "\033[34m"
-	// colorPurple := "\033[35m"
-	// ColorCyan = "\033[36m"
-	// colorWhite := "\033[37m"
 )
 
+// colors
+// colorReset := "\033[0m"
+// ColorYellow = "\033[33m"
+// ColorCyan = "\033[36m"
+// colorWhite := "\033[37m"
+
 func main() {
-	c()
-	logo()
-	mm()
+	c()    // clear screen
+	logo() // output logotype
+	mm()   // start main menu (english version)
 }
 
 // GENERAL FUNCS

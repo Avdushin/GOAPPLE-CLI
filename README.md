@@ -14,7 +14,7 @@
 ```text
 git clone https://github.com/Avdushin/GOAPPLE
 cd GOAPPLE
-./goapple
+./pin3apple
 ```
 
 ### DEMO
