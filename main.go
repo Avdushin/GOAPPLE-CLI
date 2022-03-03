@@ -8,7 +8,7 @@ import (
 )
 
 const (
-	version = "0.1"
+	version = "0.2"
 	// menu translate
 	// ru
 	selectru = "ВЫБРАТЬ"
@@ -225,6 +225,8 @@ func rusettings() {
 	fmt.Scan(&scan)
 
 	switch scan {
+	case "0":
+		print("")
 	case "1":
 		c()
 		logo()
