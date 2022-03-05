@@ -1,8 +1,8 @@
 package main
 
 import (
-	"fmt" // standart fmt
-	"os"
+	"fmt"     // standart fmt
+	"os"      // work with system
 	"os/exec" // to execute shell commands
 
 	"github.com/mbndr/figlet4go" // figlet logo
