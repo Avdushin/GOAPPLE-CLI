@@ -1,14 +1,15 @@
 package main
 
 import (
-	"fmt"     // standart fmt
+	"fmt" // standart fmt
+	"os"
 	"os/exec" // to execute shell commands
 
 	"github.com/mbndr/figlet4go" // figlet logo
 )
 
 const (
-	version = "0.3"
+	version = "1.0"
 	// menu translate
 	// ru
 	selectru = "ВЫБРАТЬ"
@@ -247,18 +248,27 @@ func rusettings() {
 
 // manjaro
 func manjaro_script() {
-	out, _ := exec.Command("sh", "src/distros/Manjaro/manjaro.sh").Output()
-	fmt.Println(string(out))
+	c := exec.Command("sh", "src/distros/Manjaro/manjaro.sh")
+	c.Stdout = os.Stdout
+	c.Stdin = os.Stdin
+	c.Stderr = os.Stderr
+	c.Run()
 }
 
 // solus
 func solus_script() {
-	out, _ := exec.Command("sh", "src/distros/Solus/solus.sh").Output()
-	fmt.Println(string(out))
+	c := exec.Command("sh", "src/distros/Solus/solus.sh")
+	c.Stdout = os.Stdout
+	c.Stdin = os.Stdin
+	c.Stderr = os.Stderr
+	c.Run()
 }
 
 // fedora
 func fedora_script() {
-	out, _ := exec.Command("sh", "src/distros/Fedora/fedora.sh").Output()
-	fmt.Println(string(out))
+	c := exec.Command("sh", "src/distros/Fedora/fedora.sh")
+	c.Stdout = os.Stdout
+	c.Stdin = os.Stdin
+	c.Stderr = os.Stderr
+	c.Run()
 }
