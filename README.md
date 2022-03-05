@@ -26,3 +26,8 @@ cd GOAPPLE
 ![myos](src/assets/myos.png)
 
 ![settings](src/assets/settings.png)
+
+<p align="center">
+2022 © <a href="https://github.com/Avdushin" target="_blank">Avdushin</a>	<br/>
+Ananazz wallpapers by <a href="https://vk.com/s.sm1rn0f">Sergo</a> 
+</p>
