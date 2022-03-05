@@ -19,6 +19,7 @@ sudo cp -r src/polybar/ ~/.config/
 sudo cp -r src/kitty/ ~/.config/
 #sudo flatpak install flathub com.rafaelmardojai.Blanket -y
 sudo cp -r src/dots/.bashrc ~/
+sudo cp -rf src/dots/rofi ~/.config/
 sudo chsh -s /usr/bin/fish
 chsh -s /usr/bin/fish
 echo -e "\e[0;92mInstalling themes and fonts..."

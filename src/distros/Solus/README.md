@@ -1,4 +1,4 @@
-![Изображение](https://cdn.discordapp.com/attachments/650681889308278785/887696040965320774/unknown.png)
+![Изображение](https://cdn.discordapp.com/attachments/755856139387797616/949668993378160670/unknown.png)
 
 
-###### **2021 © [Avdushin](https://github.com/Avdushin)**
+###### **2022 © [Avdushin](https://github.com/Avdushin)**

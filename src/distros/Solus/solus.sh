@@ -6,6 +6,7 @@ echo -e "\e[0;92mInstalling programs..."
 sudo eopkg it i3 i3blocks i3status i3-devel i3lock polybar kitty krita xkill fish ack vim bottom neofetch variety feh flameshot rofi discord steam telegram gcolor3 lxappearance picom flatpak xdg-desktop-portal-gtk font-awesome-4 font-awesome-ttf -y 
 echo -e "\e[0;92mCreating directories..."
 #sudo mkdir -p ~/.appz
+sudo mkdir -p /opt
 sudo mkdir -p ~/.config/i3/
 echo -e "\e[0;92mInstalling programs..."
 sudo tar -C $HOME -xzf src/packages/NoiseTorch_x64.tgz
@@ -16,6 +17,7 @@ sudo cp -r src/polybar/ ~/.config/
 sudo cp -r src/kitty/ ~/.config/
 #sudo flatpak install flathub com.rafaelmardojai.Blanket -y
 sudo cp -r src/dots/.bashrc ~/
+sudo cp -rf src/dots/rofi ~/.config/
 sudo chsh -s /usr/bin/fish
 chsh -s /usr/bin/fish
 echo -e "\e[0;92mInstalling themes and fonts..."
