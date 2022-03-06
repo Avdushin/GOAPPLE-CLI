@@ -118,8 +118,24 @@ func dm() {
 
 // os info
 func myos() {
-	out, _ := exec.Command("screenfetch").Output()
-	fmt.Println(string(out))
+	cmd := exec.Command("neofetch")
+	cmd.Stdout = os.Stdout
+	cmd.Stderr = os.Stderr
+	cmd.Stdin = os.Stdin
+	err := cmd.Run()
+	if err != nil {
+		fmt.Printf("Failed to start Neofetch. %s\nInstalling neofetch...\n", err.Error())
+		neofetch()
+	}
+}
+func neofetch() {
+	cmd := exec.Command("sh", "src/neofetch.sh")
+	cmd.Stdout = os.Stdout
+	cmd.Stderr = os.Stderr
+	cmd.Stdin = os.Stdin
+	cmd.Run()
+	c()
+	myos()
 }
 
 //  settings
@@ -155,7 +171,7 @@ func settings() {
 
 //  LANGUAGES
 
-//  ru
+//  ru app
 func ruApp() {
 	fmt.Printf("\n \033[36m1)\033[37m ДИСТРИБУТИВЫ  \033[36m2)\033[37m МОЯ ОС\n\n \033[36m3)\033[37m НАСТРОЙКИ \033[36m\033[36m    0)\033[31m %s\n\n\033[0m", quitru)
 
@@ -173,7 +189,7 @@ func ruApp() {
 		rudm()
 	case "2":
 		c()
-		myos()
+		myosru()
 		ruApp()
 	case "3":
 		c()
@@ -186,6 +202,7 @@ func ruApp() {
 	}
 }
 
+//  Russian distro menu
 func rudm() {
 	fmt.Printf("\n \033[36m1)\033[37m MANJARO  \033[36m2)\033[37m SOLUS\n\n \033[36m3)\033[37m FEDORA \033[36m\033[36m  \n\n \033[36m5)\033[33m %s \033[36m0)\033[31m %s\n\n\033[0m", backru, quitru)
 
@@ -214,6 +231,7 @@ func rudm() {
 	}
 }
 
+//  Russsian settings
 func rusettings() {
 	fmt.Printf("\n \033[33mАВТОР:\033[0m https://github.com/Avdushin\n \033[33mВЕРСИЯ: \033[0m%sgo\033[36m \n\n \033[33mЯЗЫК:\n\n \033[36m1)\033[0m РУССКИЙ \n \033[36m2)\033[0m ENGLISH \n\n \033[36m5) \033[33m%s \033[36m0)\033[31m %s\n\n", version, backru, quitru)
 
@@ -242,6 +260,27 @@ func rusettings() {
 		logo()
 		rusettings()
 	}
+}
+
+func myosru() {
+	cmd := exec.Command("neofetch")
+	cmd.Stdout = os.Stdout
+	cmd.Stderr = os.Stderr
+	cmd.Stdin = os.Stdin
+	err := cmd.Run()
+	if err != nil {
+		fmt.Printf("Не удалось запустить Neofetch. %s\nУстановка neofetch...\n", err.Error())
+		neofetchru()
+	}
+}
+func neofetchru() {
+	cmd := exec.Command("sh", "src/neofetch.sh")
+	cmd.Stdout = os.Stdout
+	cmd.Stderr = os.Stderr
+	cmd.Stdin = os.Stdin
+	cmd.Run()
+	c()
+	myos()
 }
 
 // SCRIPTS
