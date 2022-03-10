@@ -19,16 +19,15 @@ cd GOAPPLE
 
 ### DEMO
 
-![mm](src/assets/mm.png)
+![mm](src/assets/mm.jpg)
 
-![dm](src/assets/dm.png)
+![dm](src/assets/dm.jpg)
 
-![myos](src/assets/myos.png)
+![myos](src/assets/myos.jpg)
 
-![settings](src/assets/settings.png)
+![settings](src/assets/settings.jpg)
 
 <p align="center">
 2022 © <a href="https://github.com/Avdushin" target="_blank">Avdushin</a>	<br/>
 Ananazz wallpapers by <a href="https://t.me/sm1rn0fskiy">Sergo</a> 
 </p>
-
