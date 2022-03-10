@@ -1,8 +1,9 @@
 # GOAPPLE
 
 <div align="center">
-	<img src="src/assets/logo.png">    
+	<img src="src/assets/mm.jpg">    
 </div>
+
 
 
 
