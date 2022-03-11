@@ -30,5 +30,5 @@ cd GOAPPLE
 
 <p align="center">
 2022 © <a href="https://github.com/Avdushin" target="_blank">Avdushin</a>	<br/>
-Ananazz wallpapers by <a href="https://t.me/sm1rn0fskiy">Sergo</a> 
+Ananazz wallpapers by <a href="https://t.me/sm1rn0fskiy">Flouver1z</a> 
 </p>
