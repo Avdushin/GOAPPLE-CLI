@@ -9,7 +9,7 @@ import (
 )
 
 const (
-	version = "1.1"
+	version = "1.2"
 	// menu translate
 	// ru
 	selectru = "ВЫБРАТЬ"
@@ -42,9 +42,6 @@ func logo() {
 	options.FontColor = []figlet4go.Color{
 		figlet4go.ColorYellow,
 	}
-
-	// ascii.LoadFont("src/font/")
-
 	renderStr, _ := ascii.RenderOpts("PIN3APPLE", options)
 	fmt.Print(renderStr)
 }
@@ -287,27 +284,60 @@ func neofetchru() {
 
 // manjaro
 func manjaro_script() {
-	c := exec.Command("sh", "src/distros/Manjaro/manjaro.sh")
-	c.Stdout = os.Stdout
-	c.Stdin = os.Stdin
-	c.Stderr = os.Stderr
-	c.Run()
+	var answer string
+	fmt.Print("Are you sure you want to install Manjaro script? [Y/n]: ")
+	fmt.Scan(&answer)
+
+	switch answer {
+	case "Y", "y", "Yes", "yes":
+		c := exec.Command("sh", "src/distros/Manjaro/manjaro.sh")
+		c.Stdout = os.Stdout
+		c.Stdin = os.Stdin
+		c.Stderr = os.Stderr
+		c.Run()
+	default:
+		c()
+		logo()
+		dm()
+	}
 }
 
 // solus
 func solus_script() {
-	c := exec.Command("sh", "src/distros/Solus/solus.sh")
-	c.Stdout = os.Stdout
-	c.Stdin = os.Stdin
-	c.Stderr = os.Stderr
-	c.Run()
+	var answer string
+	fmt.Print("Are you sure you want to install Solus script? [Y/n]: ")
+	fmt.Scan(&answer)
+
+	switch answer {
+	case "Y", "y", "Yes", "yes":
+		c := exec.Command("sh", "src/distros/Solus/solus.sh")
+		c.Stdout = os.Stdout
+		c.Stdin = os.Stdin
+		c.Stderr = os.Stderr
+		c.Run()
+	default:
+		c()
+		logo()
+		dm()
+	}
 }
 
 // fedora
 func fedora_script() {
-	c := exec.Command("sh", "src/distros/Fedora/fedora.sh")
-	c.Stdout = os.Stdout
-	c.Stdin = os.Stdin
-	c.Stderr = os.Stderr
-	c.Run()
+	var answer string
+	fmt.Print("Are you sure you want to install Fedora script? [Y/n]: ")
+	fmt.Scan(&answer)
+
+	switch answer {
+	case "Y", "y", "Yes", "yes", "yeah":
+		c := exec.Command("sh", "src/distros/Fedora/fedora.sh")
+		c.Stdout = os.Stdout
+		c.Stdin = os.Stdin
+		c.Stderr = os.Stderr
+		c.Run()
+	default:
+		c()
+		logo()
+		dm()
+	}
 }
