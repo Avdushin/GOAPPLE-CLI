@@ -1,4 +1,8 @@
-![Изображение](https://cdn.discordapp.com/attachments/650681889308278785/901596784634261544/unknown.png)
+![Fedora](fedora.jpg)
 
 
-###### **2021 © [Avdushin](https://github.com/Avdushin)**
+
+![Fedora-neofetch](fedora-neofetch.jpg)
+
+
+###### **2022 © [Avdushin](https://github.com/Avdushin)**

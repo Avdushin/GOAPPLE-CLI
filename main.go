@@ -20,10 +20,10 @@ const (
 )
 
 // colors
-// colorReset := "\033[0m"
-// ColorYellow = "\033[33m"
-// ColorCyan = "\033[36m"
-// colorWhite := "\033[37m"
+// Reset := "\033[0m"
+// Yellow = "\033[33m"
+// Cyan = "\033[36m"
+// White := "\033[37m"
 
 func main() {
 	c()    // clear screen
