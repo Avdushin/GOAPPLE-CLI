@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flag"    // start with flag [-ru or -,]
 	"fmt"     // standart fmt
 	"os"      // work with system
 	"os/exec" // to execute shell commands
@@ -9,7 +10,7 @@ import (
 )
 
 const (
-	version = "1.2"
+	version = "2.0"
 	// menu translate
 	// ru
 	selectru = "ВЫБРАТЬ"
@@ -26,9 +27,20 @@ const (
 // White := "\033[37m"
 
 func main() {
-	c()    // clear screen
-	logo() // output logotype
-	mm()   // start main menu (english version)
+	lang := flag.Bool("ru", false, "a bool")
+	flag.Parse()
+	LangCheck := *lang
+	// -ru flag check
+	switch LangCheck {
+	case true:
+		c()
+		logo()
+		ruApp()
+	default:
+		c()
+		logo()
+		mm()
+	}
 }
 
 // GENERAL FUNCS
@@ -63,7 +75,7 @@ func mm() {
 	fmt.Scan(&scan)
 
 	switch scan {
-	case "0":
+	case "0", "exit", "quit":
 		println("")
 	case "1":
 		c()
@@ -94,7 +106,7 @@ func dm() {
 	fmt.Scan(&scan)
 
 	switch scan {
-	case "0":
+	case "0", "exit", "quit":
 		println("")
 	case "1":
 		manjaro_script()
@@ -145,7 +157,7 @@ func settings() {
 	fmt.Scan(&scan)
 
 	switch scan {
-	case "0":
+	case "0", "exit", "quit":
 		print("")
 	case "1":
 		c()
@@ -178,7 +190,7 @@ func ruApp() {
 	fmt.Scan(&scan)
 
 	switch scan {
-	case "0":
+	case "0", "exit", "quit", "выход":
 		println("")
 	case "1":
 		c()
@@ -209,7 +221,7 @@ func rudm() {
 	fmt.Scan(&scan)
 
 	switch scan {
-	case "0":
+	case "0", "exit", "quit", "выход":
 		println("")
 	case "1":
 		manjaro_script()
@@ -238,7 +250,7 @@ func rusettings() {
 	fmt.Scan(&scan)
 
 	switch scan {
-	case "0":
+	case "0", "exit", "quit", "выход":
 		print("")
 	case "1":
 		c()

@@ -15,7 +15,9 @@
 ```text
 git clone https://github.com/Avdushin/GOAPPLE
 cd GOAPPLE
-./pin3apple
+./goapple
+# or start Russian language
+./goapple -ru
 ```
 
 ### DEMO
