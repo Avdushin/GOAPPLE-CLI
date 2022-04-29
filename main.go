@@ -27,7 +27,7 @@ const (
 // White := "\033[37m"
 
 func main() {
-	lang := flag.Bool("ru", false, "a bool")
+	lang := flag.Bool("ru", false, "Use to start russian version")
 	flag.Parse()
 	LangCheck := *lang
 	// -ru flag check
