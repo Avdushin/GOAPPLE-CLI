@@ -125,7 +125,7 @@ bindsym $mod+F11 exec --no-startup-id rofi -show run -fullscreen -font "Noto San
 
 
 #####################################################################################################################
-#################                          how to exit, logoff, suspend, ...                        #################
+#################                          how to exit, utils.Logoff, suspend, ...                        #################
 #####################################################################################################################
 
 # lock
@@ -428,7 +428,7 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh &
 #####################################################################################################################
 
 exec --no-startup-id xfce4-power-manager &
-# ommitted next line to get super key to bring up the menu in xfce and avoid error then in i3
+# oMainMenuitted next line to get super key to bring up the menu in xfce and avoid error then in i3
 # IF xfsettingsd is activated you can not change themes
 #exec --no-startup-id xfsettingsd &
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
@@ -654,7 +654,7 @@ popup_during_fullscreen smart
 
 # Settings for I3 next gap git
 # https://github.com/Airblader/i3/tree/gaps-next
-# delete or uncomment the following lines if you do not have it or do not
+# delete or uncoMainMenuent the following lines if you do not have it or do not
 # want it
 
 
@@ -749,12 +749,12 @@ bindsym control+mod1+o exec --no-startup-id ~/.config/i3/scripts/picom-toggle.sh
 #
 #    # OPTION 1 : i3status
 #
-#    # type status_command i3status without the config file and
+#    # type status_coMainMenuand i3status without the config file and
 #    # you will get the standard i3status bar
 #    # Second one is the standard statusbar with my personal settings
 #
-#    #status_command i3status
-#    status_command i3status -c ~/.config/i3/i3status.conf
+#    #status_coMainMenuand i3status
+#    status_coMainMenuand i3status -c ~/.config/i3/i3status.conf
 #
 #
 #
@@ -764,11 +764,11 @@ bindsym control+mod1+o exec --no-startup-id ~/.config/i3/scripts/picom-toggle.sh
 #    # another way to provide text in the statusbar
 #    # put hastag in front if not installed
 #
-#    #status_command i3blocks
-#    #status_command i3blocks -c ~/.config/i3/i3blocks.conf
-#    #status_command i3blocks -c ~/.config/i3/i3blocks-rainbow.conf
-#    #status_command i3blocks -c ~/.config/i3/i3blocks-original.conf
-#    #status_command i3blocks -c ~/.config/i3/i3blocks-awesome.conf
+#    #status_coMainMenuand i3blocks
+#    #status_coMainMenuand i3blocks -c ~/.config/i3/i3blocks.conf
+#    #status_coMainMenuand i3blocks -c ~/.config/i3/i3blocks-rainbow.conf
+#    #status_coMainMenuand i3blocks -c ~/.config/i3/i3blocks-original.conf
+#    #status_coMainMenuand i3blocks -c ~/.config/i3/i3blocks-awesome.conf
 #
 #
 #    # OPTION 3 : conky
@@ -778,7 +778,7 @@ bindsym control+mod1+o exec --no-startup-id ~/.config/i3/scripts/picom-toggle.sh
 #    # documentation : https://i3wm.org/docs/user-contributed/conky-i3bar.html
 #    # conky configuration is in conky-i3statusbar
 #
-#    #status_command ~/.config/i3/start-conky-i3statusbar.sh
+#    #status_coMainMenuand ~/.config/i3/start-conky-i3statusbar.sh
 #
 #
 #

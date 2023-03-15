@@ -539,7 +539,7 @@ format-underline = #7D49B6
 
 type = internal/backlight
 
-; Use the following command to list available cards:
+; Use the following coMainMenuand to list available cards:
 ; $ ls -1 /sys/class/backlight/
 card = intel_backlight
 

@@ -1,5 +1,5 @@
 #!/bin/bash
-echo -e "\e[0;92mManjaro script starting..."
+echo -e "\e[0;92MainMenuanjaro script starting..."
 sudo pacman -Syyyuuu
 clear
 echo -e "\e[0;92mInstalling programs..."

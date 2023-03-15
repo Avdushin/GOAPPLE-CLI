@@ -152,17 +152,17 @@ bindsym $mod+F12 exec --no-startup-id rofi -show run -font "Noto Sans 13"
 
 
 #####################################################################################################################
-#################                          how to exit, logoff, suspend, ...                        #################
+#################                          how to exit, utils.Logoff, suspend, ...                        #################
 #####################################################################################################################
 
 #Backup exit
 #Press ctrl+alt+x - check toolbar for next choices
 bindsym control+mod1+X mode "$mode_system"
 
-set $mode_system System (k) lock, (l) logout, (u) suspend, (h) hibernate, (r) reboot, (s) shutdown
+set $mode_system System (k) lock, (l) utils.Logout, (u) suspend, (h) hibernate, (r) reboot, (s) shutdown
 mode "$mode_system" {
     bindsym k exec --no-startup-id ~/.config/i3/scripts/i3exit.sh lock, mode "default"
-    bindsym l exec --no-startup-id ~/.config/i3/scripts/i3exit.sh logout, mode "default"
+    bindsym l exec --no-startup-id ~/.config/i3/scripts/i3exit.sh utils.Logout, mode "default"
     bindsym u exec --no-startup-id ~/.config/i3/scripts/i3exit.sh suspend, mode "default"
     bindsym h exec --no-startup-id ~/.config/i3/scripts/i3exit.sh hibernate, mode "default"
     bindsym r exec --no-startup-id ~/.config/i3/scripts/i3exit.sh reboot, mode "default"
@@ -174,9 +174,9 @@ mode "$mode_system" {
 }
 
 
-# ArcoLinux Logout
-bindsym $mod+Shift+e exec --no-startup-id arcolinux-logout
-bindsym $mod+X exec --no-startup-id arcolinux-logout
+# ArcoLinux utils.Logout
+bindsym $mod+Shift+e exec --no-startup-id arcolinux-utils.Logout
+bindsym $mod+X exec --no-startup-id arcolinux-utils.Logout
 
 
 #####################################################################################################################
@@ -482,7 +482,7 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh &
 #####################################################################################################################
 
 exec --no-startup-id xfce4-power-manager &
-# ommitted next line to get super key to bring up the menu in xfce and avoid error then in i3
+# oMainMenuitted next line to get super key to bring up the menu in xfce and avoid error then in i3
 # IF xfsettingsd is activated you can not change themes
 #exec --no-startup-id xfsettingsd &
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
@@ -521,9 +521,9 @@ bindsym control+mod1+m exec --no-startup-id xfce4-settings-manager
 #catfish
 bindsym control+mod1+c exec --no-startup-id catfish;focus
 
-#arcolinux-logout
-bindsym control+mod1+k exec --no-startup-id arcolinux-logout
-bindsym control+mod1+l exec --no-startup-id arcolinux-logout
+#arcolinux-utils.Logout
+bindsym control+mod1+k exec --no-startup-id arcolinux-utils.Logout
+bindsym control+mod1+l exec --no-startup-id arcolinux-utils.Logout
 
 #rofi theme selector
 bindsym control+mod1+r exec --no-startup-id rofi-theme-selector
@@ -800,7 +800,7 @@ popup_during_fullscreen smart
 
 # Settings for I3 next gap git
 # https://github.com/Airblader/i3/tree/gaps-next
-# delete or uncomment the following lines if you do not have it or do not
+# delete or uncoMainMenuent the following lines if you do not have it or do not
 # want it
 
 
@@ -914,7 +914,7 @@ bindsym control+mod1+o exec --no-startup-id ~/.config/i3/scripts/picom-toggle.sh
 # bindsym Mod1+Shift+minus move scratchpad
 
 # Show the next scratchpad window or hide the focused scratchpad window.
-# If there are multiple scratchpad windows, this command cycles through them.
+# If there are multiple scratchpad windows, this coMainMenuand cycles through them.
 # bindsym Mod1+minus scratchpad show
 
 #####################################################################################################################
