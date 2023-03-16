@@ -13,8 +13,8 @@
 ### SETUP
 
 ```text
-git clone https://github.com/Avdushin/GOAPPLE
-cd GOAPPLE
+git clone https://github.com/Avdushin/GOAPPLE-CLI
+cd GOAPPLE-CLI
 ./goapple
 # or start Russian language
 ./goapple -ru
