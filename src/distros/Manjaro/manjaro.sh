@@ -7,7 +7,7 @@ echo -e "\e[0;92mInstalling programs...\e[0m"
 # installing packages
 sudo pacman -Syu i3 i3blocks i3status i3lock polybar kitty krita fish ack vim bottom neofetch flameshot variety feh rofi discord python-pip steam telegram-desktop gcolor3 lxappearance picom flatpak xdg-desktop-portal-gtk awesome-terminal-fonts noto-fonts-emoji noto-fonts --noconfirm
 # Creating directories
-echo -e "\e[0;92mCreating directories..."
+echo -e "\e[0;92mCreating directories...\e[0m"
 sudo mkdir -p ~/.config/i3/
 sudo mkdir -p ~/.local/share/Trash/files
 # Unpacking apps (NoiseTorch & Sublime Text)
