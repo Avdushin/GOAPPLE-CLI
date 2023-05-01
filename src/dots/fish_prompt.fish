@@ -1,5 +1,5 @@
 function fish_prompt
-    set -l __last_coMainMenuand_exit_status $status
+    set -l __last_command_exit_status $status
 
     if not set -q -g __fish_arrow_functions_defined
         set -g __fish_arrow_functions_defined
@@ -13,18 +13,9 @@ function fish_prompt
         end
 
         function _is_git_dirty
-            not coMainMenuand git diff-index --cached --quiet HEAD -- &>/dev/null
-            or not coMainMenuand git diff --no-ext-diff --quiet --exit-code &>/dev/null
+            not command git diff-index --cached --quiet HEAD -- &>/dev/null
+            or not command git diff --no-ext-diff --quiet --exit-code &>/dev/null
         end
-
-    function gt
-        coMainMenuand cat ~/git_token
-    end
-    
-    function subl
-        coMainMenuand .appz/sublime_text/sublime_text
-    end
-
 
         function _is_git_repo
             type -q git
@@ -73,7 +64,7 @@ function fish_prompt
     set -l normal (set_color normal)
 
     set -l arrow_color "$green"
-    if test $__last_coMainMenuand_exit_status != 0
+    if test $__last_command_exit_status != 0
         set arrow_color "$red"
     end
 
@@ -96,4 +87,16 @@ function fish_prompt
     end
 
     echo -n -s $arrow ' '$cwd $repo_info $normal ' '
+end
+ 
+function gt
+    cat ~/git_token
+end
+
+function nv
+    nvim $argv
+end
+
+function v
+    vim $argv
 end
