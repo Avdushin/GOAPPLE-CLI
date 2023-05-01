@@ -1,7 +1,7 @@
 package consts
 
 const (
-	Version = "3.0"
+	Version = "3.5"
 	// menu translate
 	// ru
 	Selectru = "ВЫБРАТЬ"
