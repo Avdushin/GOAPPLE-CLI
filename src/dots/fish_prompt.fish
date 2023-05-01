@@ -100,3 +100,15 @@ end
 function v
     vim $argv
 end
+
+function gs
+    git status
+end
+
+function gp
+    git push
+end
+
+function gc
+    git commit $argv
+end
