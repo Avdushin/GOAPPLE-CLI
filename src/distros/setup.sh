@@ -30,9 +30,9 @@ sudo tar -C $HOME -xzf src/packages/NoiseTorch_x64.tgz
 sudo tar -xf src/packages/sublime_text.tar.xz -C /opt/ && gtk-update-icon-cache && flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 # == Set configs == #
 # I3 config
-sudo cp -rf src/src/wms/i3/ ~/.config/
+sudo cp -rf src/wms/i3/ ~/.config/
 # BSPWM config (bspwmrc, sxhkd, bspwm-polybar-config)
-sudo cp -rf src/src/wms/bspwm/* ~/.config/
+sudo cp -rf src/wms/bspwm/* ~/.config/
 # Polybar config
 sudo cp -r src/polybar/ ~/.config/
 # Kitty terminal config
@@ -69,8 +69,8 @@ mkdir -p ~/.config/betterlockscreen/
 sudo cp /usr/share/doc/betterlockscreen/examples/betterlockscreenrc ~/.config/betterl
 ockscreen/
 sudo cp betterlockscreen@.service /usr/lib/systemd/system/
-systemctl disable betterlockscreen@$USER
-betterlockscreen -l dim -u src/assets/walls/
+systemctl enable betterlockscreen@$USER
+betterlockscreen dim -u src/assets/walls/
 echo -e "\e[0;92mBetterlockscreen is redy!\e[0m"
 echo -e "\e[0;92mDONE!\e[0m"
 echo -e "\e[0;91m!\e[0;1;33mYour system will be \e[0;91mREBOOT!\e[0m"
