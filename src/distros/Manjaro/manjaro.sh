@@ -19,7 +19,9 @@ sudo cp -rf src/distros/Manjaro/i3/* ~/.config/i3/
 # Polybar config
 sudo cp -r src/polybar/ ~/.config/
 # Kitty terminal config
-sudo cp -r src/kitty/ ~/.config/
+sudo cp -r src/dots/kitty/ ~/.config/
+# neofetch config
+sudo cp -rf src/dots/neofetch/ ~/.config/
 #sudo flatpak install flathub com.rafaelmardojai.Blanket -y 
 sudo cp -r src/dots/.bashrc ~/ 
 # Rofi config

@@ -45,7 +45,7 @@ func MainMenu() {
 
 // Distros menu
 func DistroMenu() {
-	fmt.Printf(" \033[36m1)\033[37m MANJARO  \033[36m2)\033[37m SOLUS\n\n \033[36m3)\033[37m FEDORA \033[36m\033[36m  \n\n \033[36m5)\033[33m BACK \033[36m0)\033[31m EXIT\n\n\033[0m")
+	fmt.Printf(" \033[36m1)\033[37m MANJARO  \033[36m2)\033[37m SOLUS\n\n \033[36m3)\033[37m FEDORA \033[36m\033[36m \033[36m4)\033[37m Default \033[36m\033[36m \n\n \033[36m5)\033[33m BACK \033[36m0)\033[31m EXIT\n\n\033[0m")
 
 	var scan string
 
@@ -69,6 +69,11 @@ func DistroMenu() {
 		DistroScript(
 			"Fedora",
 			"src/distros/Fedora/fedora.sh",
+		)
+	case "4":
+		RuDistroScript(
+			"GOAPPLE",
+			"src/distros/setup.sh",
 		)
 	case "5":
 		Clear()

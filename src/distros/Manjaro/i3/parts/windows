@@ -39,7 +39,7 @@ bindsym $mod+q kill
 #####################################################
 
 # lock
-bindsym Mod1+l exec i3lock -n --color=#033E4D
+bindsym Mod1+l exec betterlockscreen -l dim
 
 #Backup exit
 #Press ctrl+alt+x - check toolbar for next choices
@@ -49,7 +49,7 @@ bindsym $mod+X mode "$mode_system"
 set $mode_system System (l) lock, (r) reboot, (s) shutdown
 mode "$mode_system" {
     #bindsym l exec i3lock -n --color=#0D3541
-    bindsym l exec i3lock -n --color=#033E4D
+    bindsym l exec betterlockscreen -l dim
     bindsym r exec reboot
     bindsym s exec shutdown -h 0
 

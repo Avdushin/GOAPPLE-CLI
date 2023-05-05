@@ -17,6 +17,15 @@ function fish_prompt
             or not command git diff --no-ext-diff --quiet --exit-code &>/dev/null
         end
 
+    function gt
+        command cat ~/git_token
+    end
+    
+    function subl
+        command .appz/sublime_text/sublime_text
+    end
+
+
         function _is_git_repo
             type -q git
             or return 1
@@ -87,28 +96,4 @@ function fish_prompt
     end
 
     echo -n -s $arrow ' '$cwd $repo_info $normal ' '
-end
- 
-function gt
-    cat ~/git_token
-end
-
-function nv
-    nvim $argv
-end
-
-function v
-    vim $argv
-end
-
-function gs
-    git status
-end
-
-function gp
-    git push
-end
-
-function gc
-    git commit $argv
 end
