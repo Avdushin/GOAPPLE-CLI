@@ -5,9 +5,6 @@
 </div>
 
 
-
-
-
 ### GOAPPLE - Утилита для быстрой установки I3-wm.
 
 ### SETUP
@@ -24,11 +21,19 @@ cd GOAPPLE-CLI
 
 ![MainMenu](src/assets/mm.jpg)
 
-![dm](src/assets/dm.jpg)
+![dm](src/assets/new_dm.png)
 
 ![myos](src/assets/myos.jpg)
 
 ![settings](src/assets/settings.jpg)
+
+### BSPWM DEMO
+[![BSPWM-DEMO](src/assets/bspwm_demo/demo_wick.png)](https://youtu.be/wwL68yPvc68)
+
+### I3 DEMO
+![I3-DEMO](src/assets/i3-demo/fedora-i3-clear.jpg)
+
+![I3-DEMO-solus](src/assets/i3-demo/solus-i3.png) ![I3-DEMO-manjaro](src/assets/i3-demo/manjaro-i3.png) ![I3-DEMO-fedora](src/assets/i3-demo/fedora-i3.jpg)
 
 <p align="center">
 2023 © <a href="https://github.com/Avdushin" target="_blank">Avdushin</a>	<br/>

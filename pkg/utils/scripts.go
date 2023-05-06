@@ -35,7 +35,7 @@ func RuDistroScript(Distro, ScriptPath string) {
 	fmt.Scan(&answer)
 
 	switch answer {
-	case "Y", "y", "Yes", "yes", "yeah", "ДА", "д", "да", "Да":
+	case "Y", "y", "Yes", "yes", "yeah", "ДА", "д", "Д", "да", "Да":
 		c := exec.Command("sh", ScriptPath)
 		c.Stdout = os.Stdout
 		c.Stdin = os.Stdin

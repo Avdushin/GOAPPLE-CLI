@@ -4,26 +4,17 @@ import (
 	"fmt"
 	"os"
 	"os/exec"
-)
 
-const (
-	version = "2.0"
-	// menu translate
-	// ru
-	selectru = "ВЫБРАТЬ"
-	backru   = "НАЗАД"
-	quitru   = "ВЫХОД"
-	// en
-	Selecten = "SELECT"
+	"github.com/avdushin/pkg/consts"
 )
 
 // ru app
 func RuApp() {
-	fmt.Printf("\n \033[36m1)\033[37m ДИСТРИБУТИВЫ  \033[36m2)\033[37m МОЯ ОС\n\n \033[36m3)\033[37m НАСТРОЙКИ \033[36m\033[36m    0)\033[31m %s\n\n\033[0m", quitru)
+	fmt.Printf("\n \033[36m1)\033[37m ДИСТРИБУТИВЫ  \033[36m2)\033[37m МОЯ ОС\n\n \033[36m3)\033[37m НАСТРОЙКИ \033[36m\033[36m    0)\033[31m %s\n\n\033[0m", consts.Quitru)
 
 	var scan string
 
-	fmt.Printf("\033[33m %s: \033[0m", selectru)
+	fmt.Printf("\033[33m %s: \033[0m", consts.Selectru)
 	fmt.Scan(&scan)
 
 	switch scan {
@@ -54,11 +45,11 @@ func RuApp() {
 
 // Russian distro menu
 func RuDm() {
-	fmt.Printf("\n \033[36m1)\033[37m MANJARO  \033[36m2)\033[37m SOLUS\n\n \033[36m3)\033[37m FEDORA \033[36m\033[36m \033[36m4)\033[37m Default \033[36m\033[36m \n\n \033[36m5)\033[33m %s \033[36m0)\033[31m %s\n\n\033[0m", backru, quitru)
+	fmt.Printf(" \033[36m1)\033[37m BSPWM+I3WM \033[36m\n 2)\033[37m BSPWM\n\033[36m 3)\033[37m I3-WM\n\n\033[36m\033[36m\033[36m5)\033[33m %s \033[36m0)\033[31m %s\n\n\033[0m", consts.Backru, consts.Quitru)
 
 	var scan string
 
-	fmt.Printf("\033[33m %s: \033[0m", selectru)
+	fmt.Printf("\033[33m %s: \033[0m", consts.Selectru)
 	fmt.Scan(&scan)
 
 	switch scan {
@@ -66,23 +57,18 @@ func RuDm() {
 		os.Exit(0)
 	case "1":
 		RuDistroScript(
-			"Manjaro",
-			"src/distros/Manjaro/manjaro.sh",
+			"BSPWM+I3",
+			"src/distros/setup.sh",
 		)
 	case "2":
 		RuDistroScript(
-			"Solus",
-			"src/distros/Solus/solus.sh",
+			"I3-WM",
+			"src/distros/i3/setup.sh",
 		)
 	case "3":
 		RuDistroScript(
-			"Fedora",
-			"src/distros/Fedora/fedora.sh",
-		)
-	case "4":
-		RuDistroScript(
-			"GOAPPLE",
-			"src/distros/setup.sh",
+			"BSPWM",
+			"src/distros/bspwm/setup.sh",
 		)
 	case "5":
 		Clear()
@@ -97,11 +83,11 @@ func RuDm() {
 
 // Russsian settings menu
 func Rusettings() {
-	fmt.Printf("\n \033[33mАВТОР:\033[0m https://github.com/Avdushin\n \033[33mВЕРСИЯ: \033[0m%sgo\033[36m \n\n \033[33mЯЗЫК:\n\n \033[36m1)\033[0m РУССКИЙ \n \033[36m2)\033[0m ENGLISH \n\n \033[36m5) \033[33m%s \033[36m0)\033[31m %s\n\n", version, backru, quitru)
+	fmt.Printf("\n \033[33mАВТОР:\033[0m https://github.com/Avdushin\n \033[33mВЕРСИЯ: \033[0m%sgo\033[36m \n\n \033[33mЯЗЫК:\n\n \033[36m1)\033[0m РУССКИЙ \n \033[36m2)\033[0m ENGLISH \n\n \033[36m5) \033[33m%s \033[36m0)\033[31m %s\n\n", consts.Version, consts.Backru, consts.Quitru)
 
 	var scan string
 
-	fmt.Printf("\n\033[33m %s: \033[0m", selectru)
+	fmt.Printf("\n\033[33m %s: \033[0m", consts.Selectru)
 	fmt.Scan(&scan)
 
 	switch scan {
