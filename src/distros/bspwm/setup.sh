@@ -10,7 +10,6 @@ sudo dnf update -y # fedora
 clear
 echo -e "\e[0;92mInstalling programs...\e[0m"
 # == installing packages == #
-
 # Manjaro
 sudo sh -c 'cat src/distros/bspwm/distro-pkg/ | cut "-d " -f1 |  xargs pacman -S --noconfirm'
 # Solus
@@ -26,10 +25,10 @@ echo -e "\e[0;92mInstalling programs...\e[0m"
 sudo tar -C $HOME -xzf src/packages/NoiseTorch_x64.tgz
 sudo tar -xf src/packages/sublime_text.tar.xz -C /opt/ && gtk-update-icon-cache && flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 # == Set configs == #
-# I3 config
-sudo cp -rf src/wms/i3/ ~/.config/
 # BSPWM config (bspwmrc, sxhkd, bspwm-polybar-config)
 sudo cp -rf src/wms/bspwm/* ~/.config/
+sudo echo "exec sxhkd &
+exec bspwm" >> ~/.testrc
 # Polybar config
 sudo cp -r src/polybar/ ~/.config/
 # Kitty terminal config

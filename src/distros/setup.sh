@@ -31,6 +31,8 @@ sudo tar -xf src/packages/sublime_text.tar.xz -C /opt/ && gtk-update-icon-cache 
 sudo cp -rf src/wms/i3/ ~/.config/
 # BSPWM config (bspwmrc, sxhkd, bspwm-polybar-config)
 sudo cp -rf src/wms/bspwm/* ~/.config/
+sudo echo "exec sxhkd &
+exec bspwm" >> ~/.testrc
 # Polybar config
 sudo cp -r src/polybar/ ~/.config/
 # Kitty terminal config
@@ -59,7 +61,6 @@ sudo cp -r themes-for-pin3apple/Solarized-Dark-Blue themes-for-pin3apple/Solariz
 sudo cp -r src/dots/.fonts ~/
 # Get git_token file example
 sudo cp -r src/dots/git_token ~/
-
 # BetterLockScreen
 wget https://github.com/betterlockscreen/betterlockscreen/archive/refs/heads/main.zip
 unzip main.zip

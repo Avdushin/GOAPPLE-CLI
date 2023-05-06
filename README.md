@@ -12,6 +12,7 @@
 ```text
 git clone https://github.com/Avdushin/GOAPPLE-CLI
 cd GOAPPLE-CLI
+sudo su
 ./goapple
 # or start Russian language
 ./goapple -ru
