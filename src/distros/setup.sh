@@ -32,7 +32,7 @@ sudo cp -rf src/wms/i3/ ~/.config/
 # BSPWM config (bspwmrc, sxhkd, bspwm-polybar-config)
 sudo cp -rf src/wms/bspwm/* ~/.config/
 sudo echo "exec sxhkd &
-exec bspwm" >> ~/.testrc
+exec bspwm" >> ~/.xinitrc
 # Polybar config
 sudo cp -r src/polybar/ ~/.config/
 # Kitty terminal config
