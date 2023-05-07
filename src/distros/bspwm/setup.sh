@@ -28,7 +28,7 @@ sudo tar -xf src/packages/sublime_text.tar.xz -C /opt/ && gtk-update-icon-cache 
 # BSPWM config (bspwmrc, sxhkd, bspwm-polybar-config)
 sudo cp -rf src/wms/bspwm/* ~/.config/
 sudo echo "exec sxhkd &
-exec bspwm" >> ~/.testrc
+exec bspwm" >> ~/.xinitrc
 # Polybar config
 sudo cp -r src/polybar/ ~/.config/
 # Kitty terminal config
